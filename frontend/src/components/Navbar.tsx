@@ -1,27 +1,14 @@
 import { Briefcase } from "lucide-react";
+import { WandSparkles } from "lucide-react";
 
 const Navbar = () => {
 	return (
-		<nav
-			className="flex justify-between"
-			style={{
-				display: "flex",
-				alignItems: "center",
-				padding: "10px",
-				backgroundColor: "#f4f4f4",
-			}}
-		>
-			<Briefcase size={32} color="#333" />
-			<span
-				style={{
-					marginLeft: "10px",
-					fontSize: "24px",
-					fontWeight: "bold",
-					color: "#333",
-				}}
-			>
-				JobScraper
-			</span>
+		<nav className="flex justify-between shadow-md p-5 ">
+			<Briefcase size={28} color="#333" />
+			<div className="flex">
+				<span className="md:text-lg font-semibold">JobScraper</span>
+				<WandSparkles />
+			</div>
 		</nav>
 	);
 };

@@ -1,13 +1,6 @@
 const Footer = () => {
 	return (
-		<footer
-			style={{
-				textAlign: "center",
-				padding: "1rem",
-				backgroundColor: "#f4f4f4",
-				marginTop: "2rem",
-			}}
-		>
+		<footer className="text-center py-4 shadow-2xl bg-gray-800 text-white mt-auto">
 			<p>© 2024 Job Scraper. All rights reserved.</p>
 			<p>
 				Built with{" "}
@@ -15,6 +8,7 @@ const Footer = () => {
 					href="https://reactjs.org/"
 					target="_blank"
 					rel="noopener noreferrer"
+					className="text-blue-500"
 				>
 					React
 				</a>{" "}
@@ -23,21 +17,11 @@ const Footer = () => {
 					href="https://fastapi.tiangolo.com/"
 					target="_blank"
 					rel="noopener noreferrer"
+					className="text-blue-500"
 				>
 					FastAPI
 				</a>
 				.
-			</p>
-			<p>
-				<a href="mailto:info@jobscraper.com">Contact Us</a> |
-				<a
-					href="https://github.com/username/jobscraper"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					{" "}
-					GitHub
-				</a>
 			</p>
 		</footer>
 	);
