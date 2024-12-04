@@ -19,7 +19,7 @@ const Footer = () => {
 					rel="noopener noreferrer"
 					className="text-blue-500"
 				>
-					FastAPI
+					Flask
 				</a>
 				.
 			</p>

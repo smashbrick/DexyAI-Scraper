@@ -1,4 +1,3 @@
-import Button from "./Button";
 import Filter from "./Filter";
 
 export default function SearchBox({ title }: SearchBoxProps) {
@@ -9,7 +8,7 @@ export default function SearchBox({ title }: SearchBoxProps) {
         justify-center
 				flex-col
 				items-center
-        mt-48
+        mt-16
         md:text-3xl	
         text-2xl
         font-bold
@@ -28,9 +27,11 @@ text-base
 					<input
 						type="text"
 						placeholder="Search..."
-						className="w-full px-4 py-2  text-gray-600 focus:outline-none outline-double border rounded-md"
+						className="w-full px-4 py-2  text-gray-600  border rounded-md"
 					/>
-					<Button>Scrape</Button>
+					<button className="rounded-md bg-black text-white p-2  text-sm">
+						Scrape
+					</button>
 				</div>
 			</div>
 			<Filter />

@@ -1,15 +1,3 @@
-import { useState } from "react";
-
-interface JobCardProps {
-	jobTitle: string;
-	salary: string;
-	location: string;
-	remote: string;
-	companySize: string;
-	companyName: string; // Company name
-	jobLink: string; // URL for the job's apply page
-}
-
 export default function JobCards() {
 	// Sample job data
 	const jobs = [
@@ -40,18 +28,28 @@ export default function JobCards() {
 			companyName: "WebWorks", // Added company name
 			jobLink: "https://example.com/job3", // Link to apply
 		},
+		{
+			jobTitle: "Software Engineer",
+			salary: "$70,000 - $90,000",
+			location: "New York, NY",
+			remote: "Yes",
+			companySize: "Medium (51-200)",
+			companyName: "TechCorp", // Added company name
+			jobLink: "https://example.com/job1", // Link to apply
+		},
+		{
+			jobTitle: "Software Engineer",
+			salary: "$70,000 - $90,000",
+			location: "New York, NY",
+			remote: "Yes",
+			companySize: "Medium (51-200)",
+			companyName: "TechCorp", // Added company name
+			jobLink: "https://example.com/job1", // Link to apply
+		},
 	];
 
-	const [savedJobs, setSavedJobs] = useState<string[]>([]); // Track saved jobs
-
-	// Handle saving a job
-	const saveJob = (jobTitle: string) => {
-		setSavedJobs((prev) => [...prev, jobTitle]);
-		alert(`${jobTitle} has been saved!`);
-	};
-
 	return (
-		<div className="flex flex-wrap justify-center gap-6 mt-8 mb-5">
+		<div className="flex flex-wrap justify-center gap-6 mt-16 mb-5 ">
 			{jobs.map((job, index) => (
 				<div
 					key={index}
@@ -70,15 +68,17 @@ export default function JobCards() {
 					<p className="text-sm text-gray-600">
 						Company Size: {job.companySize}
 					</p>
-					<div className="flex gap-4 mt-4">
-						<button
-							className="bg-gray-200 text-sm p-2 rounded-md"
-							onClick={() => saveJob(job.jobTitle)}
-						>
+					<div className="flex gap-4 mt-4 w-full">
+						<button className="rounded-md border border-black text-black p-2 flex-grow text-sm">
 							Save
 						</button>
-						<a href={job.jobLink} target="_blank" rel="noopener noreferrer">
-							<button className="bg-blue-500 text-white text-sm p-2 rounded-md">
+						<a
+							href={job.jobLink}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="flex-grow"
+						>
+							<button className="rounded-md bg-black text-white p-2 w-full text-sm">
 								Apply
 							</button>
 						</a>
