@@ -66,9 +66,6 @@ export default function JobCards({ data }: JobCardsProps) {
 								Company: {job.company_name}
 							</p>
 							<p className="text-sm text-gray-600">
-								Salary: {job.company_salary}
-							</p>
-							<p className="text-sm text-gray-600">
 								Location: {job.company_location}
 							</p>
 							<p className="text-sm text-gray-600">
@@ -111,9 +108,7 @@ export default function JobCards({ data }: JobCardsProps) {
 									<p className="text-sm text-gray-600">
 										Company: {job.company_name}
 									</p>
-									<p className="text-sm text-gray-600">
-										Salary: {job.company_salary}
-									</p>
+
 									<p className="text-sm text-gray-600">
 										Location: {job.company_location}
 									</p>
@@ -149,7 +144,6 @@ export default function JobCards({ data }: JobCardsProps) {
 interface Job {
 	job_title: string;
 	company_name: string;
-	company_salary: string;
 	company_location: string;
 	company_size: string;
 }
