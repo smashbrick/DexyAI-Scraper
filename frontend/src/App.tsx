@@ -12,8 +12,6 @@ export default function App() {
 				<Navbar />
 				<div className="flex-grow">
 					<SearchCard />
-					{/* <SearchBox title="Explore jobs!" /> */}
-					{/* <JobCards /> */}
 				</div>
 				<Footer />
 			</div>
