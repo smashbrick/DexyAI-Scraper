@@ -6,7 +6,7 @@ A full-stack application for scraping job listings based on user input. The fron
 
 ## 🚀 Demo Screenshot
 
-![Job Scraper UI](screenshot.png)
+![Job Scraper UI](/mainScreen.png)
 
 ---
 
@@ -67,7 +67,7 @@ pip install -r requirements.txt
 
 pip install Flask requests beautifulsoup4 flask-cors swiftshadow
 
-flash run
+flask run
 
 ## 📝 Things I Learned
 

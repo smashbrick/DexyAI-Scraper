@@ -57,15 +57,28 @@ def scrape(jobParams):
         proxy = swift.proxy()
         proxies = {
             proxy[1]: proxy[0]
+     
         }
 
-        url = "https://wellfound.com/location/united-states"
+        url = "https://wellfound.com/location/india"
 
-        # Initial request to set cookies
-        response = requests.get(url, proxies=proxies, timeout=10)
-        response.raise_for_status()
-        cookies = response.cookies
+        # # Initial request to set cookies
+        # response = requests.get(url, proxies=proxies, timeout=10)
+        # response.raise_for_status()
+        # cookies = response.cookies
 
+        cookies = {
+            'ajs_anonymous_id': 'eaa4038e-6e2d-415e-8f40-8af139514b9c',
+            '_wellfound': '9185b88612086613f012d68a882d6bc6.o',
+            '_hjSessionUser_1444722': 'eyJpZCI6ImYwNzQxYjQ4LWQ3MDQtNTVjNS1hNjJkLTJiM2I2ZjYzYjM5NiIsImNyZWF0ZWQiOjE3MzM2ODQzMzI3MjcsImV4aXN0aW5nIjp0cnVlfQ==',
+            '_hjSession_1444722': 'eyJpZCI6IjE1MGQ1YWRmLWVkYWUtNDQzMC1hNGQ0LWI5MzRmMDc1ZGFmZCIsImMiOjE3MzM2ODQzMzI3MjgsInMiOjEsInIiOjAsInNiIjowLCJzciI6MCwic2UiOjAsImZzIjoxLCJzcCI6MX0=',
+            'cf_clearance': 'EAKkUGoOePebUq03yMP90YV8_ETtxWoK9GjvbWv4RZI-1733684333-1.2.1.1-io4DXCJnlnwUriqNiOS1iazzkA4fQnXIZ_LXFtZGp3ii4d6TQYHjt9YLXo09FAQgTdNShZ7frAMvNqC9_f_g0lp3RLV7kqX5Z1aoyMpm3jCuAS26FDevf9vUDwXC_dxHrKwBNx9L1pf_lyC8DFoLxId1iuKHjQ7u4bb7LIggVkoPEehcWcvQ_oeaIUmLuZmraDYIyD3VsqyoYbwLk0y.o.SnTRdHiTyJiXeeADubj_qr2dEoWFwjsF6B47Q4qz0Ir59JJX7XpA9EfnLqzjhjKetrbTbTrkxuzirgvZ9ZTY_SRT9ubRoFmPIS6kQiQ3QxBmcYiYpGBV3BijDAfmPKEIVU.DZmyrEFS.G6Nwm9oSCHLGV5Z5j8YCQHSqbfiY6nPvkumj_xwPgTFWViAY55JQ',
+            '_ga': 'GA1.1.228803313.1733684333',
+            '_ga_705F94181H': 'GS1.1.1733684333.1.0.1733684333.60.0.0',
+            'datadome': 'gQpR101pUsaez6SH7NmCQvRvWfx37Nfwf3LfzLkph8wHefnGGc8ofXPQCniiq4pZLC2QkJIUnnsLrkbGBqz_YyxNQ2EW5jsMC80DO9L9~SO1oSdhThe359hCU3RJToIL',
+        }
+
+        
         headers = {
             'accept': '/',
             'accept-language': 'en-US,en;q=0.9',
@@ -77,7 +90,7 @@ def scrape(jobParams):
         }
 
         job_url = f'https://wellfound.com/role/l/{jobParams}'
-        response = requests.get(job_url, cookies=cookies, headers=headers, proxies=proxies, timeout=10, verify=False)
+        response = requests.get(job_url, cookies=cookies, headers=headers, proxies=proxies,  verify=False)
         response.raise_for_status()  # Raise HTTPError for bad responses (4xx or 5xx)
         
         return response.text
