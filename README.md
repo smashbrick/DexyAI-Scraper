@@ -6,7 +6,7 @@ A full-stack application for scraping job listings based on user input. The fron
 
 ## 🚀 Demo Screenshot
 
-![Job Scraper UI](/mainScreen.png)
+![Job Scraper UI](frontend/public/mainScreen.png)
 
 ---
 
